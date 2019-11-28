@@ -2,7 +2,7 @@ FROM golang:1.12-alpine3.9
 
 COPY . /gosrc
 WORKDIR /gosrc
-RUN go build -o api
+RUN go build -mod=vendor -o api
 
 FROM alpine:3.9
 # TODO. Change this email to yours!
